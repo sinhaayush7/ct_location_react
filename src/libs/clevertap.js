@@ -1,4 +1,6 @@
+
 /* eslint-disable */
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -5887,13 +5889,10 @@
       };
 
       function showPosition(position) {
+        console.log(this);
         var lat = position.coords.latitude;
         var lng = position.coords.longitude;
-        console.log('Location is ', lat, lng);
-        this.sendMultiValueData({
-          Latitude: lat,
-          Longitude: lng
-        });
+        console.log('Location is ', lat, lng); // this.sendMultiValueData({ Latitude: lat, Longitude: lng })
       }
 
       function showError(error) {
